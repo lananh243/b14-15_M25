@@ -23,7 +23,7 @@ export default async function Page() {
       <p className="text-xl font-bold">Danh sách sản phẩm</p>
       {products.map((item: any) => {
         return (
-          <ul>
+          <ul key={item.id}>
             <li>{item.title}</li>
             <li>{item.price}</li>
             <b>***************************</b>
