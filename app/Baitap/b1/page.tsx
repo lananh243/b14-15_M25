@@ -4,13 +4,13 @@ async function getData() {
   const data = res.json();
   return data;
 }
-export default async function page() {
+export default async function Page() {
   const posts = await getData();
   return (
     <div className="p-6">
       <p className="text-xl font-bold">List of Posts</p>
       {posts.slice(0, 15).map((item: any) => {
-        return <p>{item.title}</p>;
+        return <p key={item.id}>{item.title}</p>;
       })}
     </div>
   );

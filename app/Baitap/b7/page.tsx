@@ -4,7 +4,7 @@ async function getData() {
   const data = res.json();
   return data;
 }
-export default async function page() {
+export default async function Page() {
   const products = await getData();
   return (
     <div className="p-6">

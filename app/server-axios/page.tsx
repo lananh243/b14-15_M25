@@ -5,7 +5,7 @@ async function getData() {
   return res.data;
 }
 getData();
-export default async function page() {
+export default async function Page() {
   const comments = await getData();
   return (
     <div>

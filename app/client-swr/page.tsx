@@ -4,7 +4,7 @@ import useSWR from "swr";
 import axios from "axios";
 // viết hàm đi lấy data
 const getData = (url: string) => axios.get(url).then((res) => res.data);
-export default function page() {
+export default function Page() {
   const { data, error } = useSWR(
     "https://jsonplaceholder.typicode.com/comments",
     getData

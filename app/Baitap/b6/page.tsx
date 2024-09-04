@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-export default function page() {
+export default function Page() {
   const [users, setUser] = useState([]);
   useEffect(() => {
     const getData = async () => {

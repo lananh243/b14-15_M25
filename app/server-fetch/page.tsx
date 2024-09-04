@@ -5,13 +5,13 @@ async function getData() {
   const data = res.json();
   return data;
 }
-export default async function page() {
+export default async function Page() {
   const comments = await getData();
   return (
     <div>
       tim nap du lieu server voi fetch
       {comments.map((item: any) => {
-        return <li>{item.name}</li>;
+        return <li key={item.id}>{item.name}</li>;
       })}
     </div>
   );
